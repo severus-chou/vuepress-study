@@ -1,47 +1,69 @@
 ### Git 常用命令
 
-- mkdir <文件夹名>
+```sh
+  # 初始化Git
+  git init
 
-- git init 初始化仓库
+  # 克隆本地仓库 （/path/to/repository 本地仓库地址）
+  git clone /path/to/repository
 
-- git clone /path/to/repository 克隆本地仓库 （/path/to/repository 本地仓库地址）
+  # 克隆远程仓库
+  git clone username@host:/path/to/repository
 
-- git clone username@host:/path/to/repository 克隆远程仓库
+  # 添加指定文件到缓存区
+  git add ${filename}
 
-- git add <filename\> 添加指定文件到缓存区
+  # 添加所有改动文件到缓存区
+  git add .
 
-- git add \* 添加所有改动文件到缓存区
+  # 提交改动
+  git commit -m ${message}
 
-- git commit -m "代码提交信息" 提交改动
+  # 提交到远程仓库，master 可更换为指定分支名
+  git push origin master
 
-- git push origin master 提交到远程仓库，master 可更换为指定分支名
+  # 如还没克隆仓库，并欲将本地仓库连接某个远程服务器，可以使用此命令
+  git remote add origin ${path}
 
-- git remote add origin <server 地址\> 如还没克隆仓库，并欲将本地仓库连接某个远程服务器，可以使用此命令
+  # 创建一个叫做“feature_x”的分支，并切换过去
+  git checkout -b feature_x
 
-- git checkout -b feature\*x 创建一个叫做“feature_x”的分支，并切换过去
+  # 切换到master分支
+  git checkout master
 
-- git checkout master 切换回主分支
+  # 删除本地feature_x分支
+  git branch -d feature_x
 
-- git branch -d feature_x 再把新建的分支删掉
+  # 更新你的本地仓库至最新改动
+  git pull
 
-- git pull 更新你的本地仓库至最新改动
+  # 合并其他分支到你的当前分支
+  git merge ${other branchName}
 
-- git merge <\branch> 合并其他分支到你的当前分支,有冲突时会提示，解决完冲突，执行 git add
+  # 在合并改动之前,可以使用此命令查看区别
+  git diff ${source_branch} ${target_branch}
 
-- git diff <\source_branch> <\target_branch> 在合并改动之前,可以使用此命令查看区别
+  # 打 tag，创建标签，\_1b2e1d63ff\* 是你想要标记的提交 ID 的前 10 位字符
+  git tag 1.0.0 1b2e1d63ff
 
-- git tag 1.0.0 1b2e1d63ff 打 tag，创建标签，\_1b2e1d63ff\* 是你想要标记的提交 ID 的前 10 位字符
+  # 获取日志
+  git log
 
-- git log 获取提交 ID
+  # 切换分支
+  git checkout ${branchName}
 
-- git checkout -- <filename\> 替换本地改动
+  #  丢弃本地改动与提交，到服务器上获取最新的版本并将本地主分支指向到它
+  git fetch origin  git reset --hard origin/master
 
-- git fetch origin git reset --hard origin/master 丢弃本地改动与提交，到服务器上获取最新的版本并将本地主分支指向到它
+  # 打开图形化Git
+  gitk
 
-- gitk 打开图形化 git
+  # 彩色的Git输出
+  git config color.ui true
 
-- git config color.ui true 彩色的 git 输出
+  #  设置显示历史记录时，只显示一行注释信息
+  git config format.pretty oneline
 
-- git config format.pretty oneline 设置显示历史记录时，只显示一行注释信息
-
-- git add -i 交互地添加文件至缓存区
+  # 交互地添加文件至缓存区
+  git add -i
+```

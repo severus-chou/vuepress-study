@@ -1,23 +1,36 @@
 ### npm 常用命令
 
-- npm init 初始化一个项目,需要确认一些步骤才能生成 package.json 文件
+```sh
+# 初始化项目
+npm init
 
-- npm init -y 默认初始化，直接生成 package.json 文件
+# 初始化项目,默认package.json
+npm init -y
 
-- npm install 安装所有依赖
+# 安装依赖
+npm instal
 
-- npm install <包名> 安装指定包依赖
+# 安装插件
+npm install ${packageName}
 
-- npm install -g <包名> 安装全局指定包依赖
+# 全局安装
+npm install -g ${packageName}
 
-- npm install -s <包名> 安装并保存指定依赖到当前项目，会将依赖一起打包
+# 安装并保存指定依赖到当前项目，会将依赖一起打包
+npm install -s ${packageName}
 
-- npm install -D <包名> 安装指定包依赖到当前项目的本地
+# 安装插件到本地环境
+npm install -D ${packageName}
 
-- npm update <包名> 更新指定依赖
+# 更新指定插件
+npm update ${packageName}
 
-- npm uninstall <包名> 卸载指定依赖，或删除 package.json 文件中的依赖名
+# 卸载插件
+npm uninstall ${packageName}
 
-- npm run <命令名> 运行项目,（不同项目命令名可能不同，可在 package.json 中 scripts 对象中找到）
+# 运行项目,对应package.json内scripts
+npm run ${命令}
 
-- npm run build 打包项目,（不同项目，可能存在多个 build 跟不同后缀的命令,例如:npm run build-sit）
+# 打包项目,对应package.json内scripts
+npm run ${命令}
+```
