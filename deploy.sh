@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:deathyboy/vuepress-study.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:deathyboy/vuepress-study.git feature
+git push -f git@github.com:deathyboy/vuepress-study.git master:gh-pages
 
 cd -
