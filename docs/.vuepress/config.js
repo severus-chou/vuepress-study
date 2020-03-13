@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Vue 项目开发随笔', // 大标题
+  title: '开发知识点', // 大标题
   description: 'vuepress study',
   base: '/', // docs为根目录
   themeConfig: {
@@ -8,7 +8,10 @@ module.exports = {
       ['/', '主页'],
       ['/install/', '安装'],
       ['/npm/', 'npm命令'],
-      ['/git/', 'git命令']
+      ['/git/', 'git命令'],
+      ['/express/', 'express'],
+      ['/mongo/', 'mongo']
+      // ['/js/', 'JS']
     ]
   }
 }

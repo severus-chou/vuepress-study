@@ -1,6 +1,4 @@
-### 环境准备
-
----
+## 环境准备
 
 - 所需软件及插件：<strong>Node、Vuepress</strong>
 
