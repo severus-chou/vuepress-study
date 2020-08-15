@@ -11,7 +11,10 @@ module.exports = {
       ['/git/', 'git命令'],
       ['/express/', 'express'],
       ['/mongo/', 'mongo'],
-      ['/js/', 'JS']
-    ]
-  }
+      ['/js/', 'JS'],
+    ],
+  },
+  // markdown: {
+  //   lineNumbers: true // 代码块行号
+  // }
 }

@@ -3,15 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>开发知识点</title>
+    <title>数据类型 | 开发知识点</title>
     <meta name="description" content="vuepress study">
     
     
-    <link rel="preload" href="/vuepress-study/assets/css/0.styles.9400bd5b.css" as="style"><link rel="preload" href="/vuepress-study/assets/js/app.fcc83d83.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/2.6e319733.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/9.9cafff30.js" as="script"><link rel="prefetch" href="/vuepress-study/assets/js/10.0a07f2f9.js"><link rel="prefetch" href="/vuepress-study/assets/js/11.6a0f7754.js"><link rel="prefetch" href="/vuepress-study/assets/js/12.6a6b2ef0.js"><link rel="prefetch" href="/vuepress-study/assets/js/3.f48b7bc9.js"><link rel="prefetch" href="/vuepress-study/assets/js/4.2f35b444.js"><link rel="prefetch" href="/vuepress-study/assets/js/5.87f30edc.js"><link rel="prefetch" href="/vuepress-study/assets/js/6.1745559e.js"><link rel="prefetch" href="/vuepress-study/assets/js/7.08151374.js"><link rel="prefetch" href="/vuepress-study/assets/js/8.0554e2b3.js">
+    <link rel="preload" href="/vuepress-study/assets/css/0.styles.9400bd5b.css" as="style"><link rel="preload" href="/vuepress-study/assets/js/app.7ca286d3.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/2.6e319733.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/9.23d3a96f.js" as="script"><link rel="prefetch" href="/vuepress-study/assets/js/10.2643bda3.js"><link rel="prefetch" href="/vuepress-study/assets/js/11.9a9c61da.js"><link rel="prefetch" href="/vuepress-study/assets/js/12.6a6b2ef0.js"><link rel="prefetch" href="/vuepress-study/assets/js/3.f48b7bc9.js"><link rel="prefetch" href="/vuepress-study/assets/js/4.2f35b444.js"><link rel="prefetch" href="/vuepress-study/assets/js/5.87f30edc.js"><link rel="prefetch" href="/vuepress-study/assets/js/6.1745559e.js"><link rel="prefetch" href="/vuepress-study/assets/js/7.8fd550d3.js"><link rel="prefetch" href="/vuepress-study/assets/js/8.abd209b9.js">
     <link rel="stylesheet" href="/vuepress-study/assets/css/0.styles.9400bd5b.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/vuepress-study/" class="sidebar-link">主页</a></li><li><a href="/vuepress-study/install/" class="sidebar-link">安装</a></li><li><a href="/vuepress-study/npm/" class="sidebar-link">npm命令</a></li><li><a href="/vuepress-study/git/" class="sidebar-link">git命令</a></li><li><a href="/vuepress-study/express/" class="sidebar-link">express</a></li><li><a href="/vuepress-study/mongo/" class="sidebar-link">mongo</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
-    <script src="/vuepress-study/assets/js/app.fcc83d83.js" defer></script><script src="/vuepress-study/assets/js/2.6e319733.js" defer></script><script src="/vuepress-study/assets/js/9.9cafff30.js" defer></script>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/vuepress-study/" class="sidebar-link">主页</a></li><li><a href="/vuepress-study/install/" class="sidebar-link">安装</a></li><li><a href="/vuepress-study/npm/" class="sidebar-link">npm命令</a></li><li><a href="/vuepress-study/git/" class="sidebar-link">git命令</a></li><li><a href="/vuepress-study/express/" class="sidebar-link">express</a></li><li><a href="/vuepress-study/mongo/" class="sidebar-link">mongo</a></li><li><a href="/vuepress-study/js/" class="active sidebar-link">JS</a><ul class="sidebar-sub-headers"></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="数据类型"><a href="#数据类型" aria-hidden="true" class="header-anchor">#</a> 数据类型</h3> <ul><li>String</li> <li>Number</li> <li>Boolean</li> <li>null</li> <li>undefined</li> <li>Object</li> <li>Symbol</li></ul> <h3 id="对象的复制"><a href="#对象的复制" aria-hidden="true" class="header-anchor">#</a> 对象的复制</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 方法一</span>
+<span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">'Jhon'</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token number">24</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> clone <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// 新的空对象</span>
+<span class="token comment">// 复制属性值</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  clone<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> user<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 复制的对象属性值是独立存在的</span>
+clone<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Pete'</span>
+
+<span class="token comment">// 方法二</span>
+<span class="token keyword">let</span> clone <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> user<span class="token punctuation">)</span>
+</code></pre></div><h3 id="对象的合并"><a href="#对象的合并" aria-hidden="true" class="header-anchor">#</a> 对象的合并</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">'John'</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> permissions1 <span class="token operator">=</span> <span class="token punctuation">{</span> canView<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> permissions2 <span class="token operator">=</span> <span class="token punctuation">{</span> canEdit<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> permissions1<span class="token punctuation">,</span> permissions2<span class="token punctuation">)</span>
+<span class="token comment">// user = {name:'Jhon',canView:true,canEdit:true}</span>
+
+<span class="token comment">// 如果接收的对象（user）已经有了同样属性名的属性，前面的属性值会被覆盖</span>
+<span class="token comment">// 覆盖 name，增加 isAdmin</span>
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'Pete'</span><span class="token punctuation">,</span> isAdmin<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// 现在 user = { name: &quot;Pete&quot;, isAdmin: true }</span>
+</code></pre></div><h3 id="比较运算符"><a href="#比较运算符" aria-hidden="true" class="header-anchor">#</a> 比较运算符</h3> <ul><li>比较运算符始终返回布尔值。</li> <li>字符串的比较，会按照“词典”顺序逐字符地比较大小。</li> <li>当对不同类型的值进行比较时，它们会先被转化为数字（不包括严格相等检测）再进行比较。</li> <li>在非严格相等 <code>==</code> 下，<code>null</code> 和 <code>undefined</code> 相等且各自不等于任何其他的值。</li> <li>在使用 <code>&gt;</code> 或 <code>&lt;</code> 进行比较时，需要注意变量可能为 <code>null/undefined</code> 的情况。比较好的方法是单独检查变量是否等于 <code>null/undefined</code>。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">null</span> <span class="token operator">==</span> <span class="token keyword">undefined</span> <span class="token comment">// true</span>
+<span class="token keyword">null</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token comment">// false</span>
+<span class="token keyword">null</span> <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token comment">// true</span>
+<span class="token keyword">null</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token comment">// false</span>
+<span class="token keyword">null</span> <span class="token operator">&gt;=</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+
+<span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token comment">// false</span>
+<span class="token keyword">undefined</span> <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token comment">// false</span>
+<span class="token keyword">undefined</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token comment">// false</span>
+<span class="token keyword">undefined</span> <span class="token operator">&gt;=</span> <span class="token boolean">false</span> <span class="token comment">// false</span>
+
+<span class="token string">''</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token comment">// true</span>
+<span class="token string">''</span> <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token comment">// true</span>
+<span class="token string">''</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+<span class="token string">''</span> <span class="token operator">&gt;=</span> <span class="token boolean">false</span> <span class="token comment">// true</span>
+</code></pre></div><h3 id="如何从一个多层嵌套的循环中跳出来"><a href="#如何从一个多层嵌套的循环中跳出来" aria-hidden="true" class="header-anchor">#</a> 如何从一个多层嵌套的循环中跳出来</h3> <div class="language-js extra-class"><pre class="language-js"><code>outer<span class="token punctuation">:</span> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> input <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">value at coords(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">,</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>j<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>input<span class="token punctuation">)</span> <span class="token keyword">break</span> outer
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'done!'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="模块查找机制"><a href="#模块查找机制" aria-hidden="true" class="header-anchor">#</a> 模块查找机制</h3> <ul><li>优先级由高到低</li> <li>优先从缓存加载</li> <li>核心模块</li> <li>路径形式的文件模块</li> <li>第三方模块</li> <li>node_modules/{模块名}/</li> <li>node_modules/{模块名}/package.json</li> <li>node_modules/{模块名}/package.json=&gt;main</li> <li>index.js (备选项)</li> <li>进入上一级目录找 node_modules</li> <li>依次向上查找，直至磁盘，若还找不到，抛出错误</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vuepress-study/mongo/" class="prev">
+          mongo
+        </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-study/assets/js/app.7ca286d3.js" defer></script><script src="/vuepress-study/assets/js/2.6e319733.js" defer></script><script src="/vuepress-study/assets/js/9.23d3a96f.js" defer></script>
   </body>
 </html>

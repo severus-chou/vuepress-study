@@ -1,4 +1,4 @@
-## 环境准备
+### 环境准备
 
 - 所需软件及插件：<strong>Node、Vuepress</strong>
 
@@ -80,6 +80,8 @@
   md config.js
 ```
 
+### config.js 文件
+
 ```js
 module.exports = {
   title: 'Vue 项目开发随笔', // 大标题
@@ -87,8 +89,8 @@ module.exports = {
   base: '/', // docs为根目录
   themeConfig: {
     navbar: false, // 禁用导航栏位
-    sidebar: [['/', '主页']]
-  }
+    sidebar: [['/', '主页']],
+  },
 }
 ```
 
@@ -99,6 +101,59 @@ module.exports = {
 ```sh
 # 启动
 npm run dev
-# 构建
+# 打包
 npm run build
+```
+
+### vuepress 项目发布
+
+- 更改<strong>.vuepress/config.js</strong> 文件 base
+
+```js
+base: '/vuepress-study/' // 根目录改为仓库名称
+```
+
+- 根目录下新建 deploy.sh 文件
+
+```sh
+#!/usr/bin/env sh
+
+# 确保脚本抛出遇到的错误
+set -e
+
+# 生成静态文件
+npm run build
+
+# 进入生成的文件夹
+cd docs/.vuepress/dist
+
+# 如果是发布到自定义域名
+# echo 'www.example.com' > CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# 如果发布到 https://<USERNAME>.github.io
+#  git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+cd -
+```
+
+- package.json 文件新增命令
+
+```json
+{
+  "scripts": {
+    "deploy": "bash deploy.sh"
+  }
+}
+```
+
+```sh
+# 开发完成执行命令
+npm run deploy
 ```

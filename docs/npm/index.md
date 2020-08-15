@@ -8,7 +8,7 @@ npm init
 npm init -y
 
 # 安装依赖
-npm instal
+npm install
 
 # 安装插件
 npm install ${packageName}
