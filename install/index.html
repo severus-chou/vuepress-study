@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>环境准备 | 开发知识点</title>
+    <meta name="description" content="vuepress study">
+    
+    
+    <link rel="preload" href="/vuepress-study/assets/css/0.styles.221d8580.css" as="style"><link rel="preload" href="/vuepress-study/assets/js/app.ba3766b5.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/2.6e319733.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/8.a03f4ce0.js" as="script"><link rel="prefetch" href="/vuepress-study/assets/js/10.0a07f2f9.js"><link rel="prefetch" href="/vuepress-study/assets/js/11.e5eaa34b.js"><link rel="prefetch" href="/vuepress-study/assets/js/12.6a6b2ef0.js"><link rel="prefetch" href="/vuepress-study/assets/js/3.c293dd07.js"><link rel="prefetch" href="/vuepress-study/assets/js/4.2f35b444.js"><link rel="prefetch" href="/vuepress-study/assets/js/5.87f30edc.js"><link rel="prefetch" href="/vuepress-study/assets/js/6.20b90a4b.js"><link rel="prefetch" href="/vuepress-study/assets/js/7.94ac207e.js"><link rel="prefetch" href="/vuepress-study/assets/js/9.ac3e6d7d.js">
+    <link rel="stylesheet" href="/vuepress-study/assets/css/0.styles.221d8580.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/vuepress-study/" class="sidebar-link">主页</a></li><li><a href="/vuepress-study/install/" class="active sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vuepress-study/npm/" class="sidebar-link">npm命令</a></li><li><a href="/vuepress-study/git/" class="sidebar-link">git命令</a></li><li><a href="/vuepress-study/express/" class="sidebar-link">express</a></li><li><a href="/vuepress-study/mongo/" class="sidebar-link">mongo</a></li><li><a href="/vuepress-study/js/" class="sidebar-link">JS</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="环境准备"><a href="#环境准备" aria-hidden="true" class="header-anchor">#</a> 环境准备</h3> <ul><li><p>所需软件及插件：<strong>Node、Vuepress</strong></p></li> <li><p>打开 <strong>Node</strong> 官网，根据自己电脑操作系统下载对应系统的长期支持版</p></li></ul> <h3 id="初始化项目"><a href="#初始化项目" aria-hidden="true" class="header-anchor">#</a> 初始化项目</h3> <hr> <div class="language-sh extra-class"><pre class="language-sh"><code>  <span class="token comment"># 新建项目目录 并进入</span>
+  <span class="token function">mkdir</span> vuepress-study
+  <span class="token builtin class-name">cd</span> vuepress-study
+
+  <span class="token comment"># 初始化项目 生成package.json配置文件</span>
+  <span class="token function">npm</span> init -y
+</code></pre></div><div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;test-demo&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;description&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;main&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index.js&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;keywords&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;author&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ISC&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="安装-vuepress"><a href="#安装-vuepress" aria-hidden="true" class="header-anchor">#</a> 安装 vuepress</h3> <hr> <div class="language-sh extra-class"><pre class="language-sh"><code>  <span class="token comment"># 全局安装</span>
+  <span class="token function">npm</span> <span class="token function">install</span> -g vuepress
+  <span class="token comment"># 当前项目安装</span>
+  <span class="token function">npm</span> <span class="token function">install</span> -D vuepress
+</code></pre></div><h3 id="目录配置"><a href="#目录配置" aria-hidden="true" class="header-anchor">#</a> 目录配置</h3> <hr> <div class="language-sh extra-class"><pre class="language-sh"><code>  <span class="token comment"># 新建文件夹docs</span>
+  <span class="token function">mkdir</span> docs
+  <span class="token comment"># 新建主页(入口)</span>
+  md README.md
+  <span class="token comment"># 目录配置</span>
+</code></pre></div><h3 id="配置-package-json"><a href="#配置-package-json" aria-hidden="true" class="header-anchor">#</a> 配置 package.json</h3> <hr> <div class="language-json extra-class"><pre class="language-json"><code>  <span class="token punctuation">{</span>
+    ...
+    <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+      <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h3 id="vuepress-config-js"><a href="#vuepress-config-js" aria-hidden="true" class="header-anchor">#</a> .vuepress/config.js</h3> <hr> <div class="language-sh extra-class"><pre class="language-sh"><code>  <span class="token comment"># 配置目录</span>
+  <span class="token builtin class-name">cd</span> docs
+  <span class="token function">mkdir</span> .vuepress
+  md config.js
+</code></pre></div><h3 id="config-js-文件"><a href="#config-js-文件" aria-hidden="true" class="header-anchor">#</a> config.js 文件</h3> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  title<span class="token punctuation">:</span> <span class="token string">'Vue 项目开发随笔'</span><span class="token punctuation">,</span> <span class="token comment">// 大标题</span>
+  description<span class="token punctuation">:</span> <span class="token string">'vuepress study'</span><span class="token punctuation">,</span>
+  base<span class="token punctuation">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token comment">// docs为根目录</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    navbar<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 禁用导航栏位</span>
+    sidebar<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token string">'主页'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="启动-构建项目"><a href="#启动-构建项目" aria-hidden="true" class="header-anchor">#</a> 启动&amp;构建项目</h3> <hr> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 启动</span>
+<span class="token function">npm</span> run dev
+<span class="token comment"># 打包</span>
+<span class="token function">npm</span> run build
+</code></pre></div><h3 id="vuepress-项目发布"><a href="#vuepress-项目发布" aria-hidden="true" class="header-anchor">#</a> vuepress 项目发布</h3> <ul><li>更改<strong>.vuepress/config.js</strong> 文件 base</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>base<span class="token punctuation">:</span> <span class="token string">'/vuepress-study/'</span> <span class="token comment">// 根目录改为仓库名称</span>
+</code></pre></div><ul><li>根目录下新建 deploy.sh 文件</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/usr/bin/env sh</span>
+
+<span class="token comment"># 确保脚本抛出遇到的错误</span>
+<span class="token builtin class-name">set</span> -e
+
+<span class="token comment"># 生成静态文件</span>
+<span class="token function">npm</span> run build
+
+<span class="token comment"># 进入生成的文件夹</span>
+<span class="token builtin class-name">cd</span> docs/.vuepress/dist
+
+<span class="token comment"># 如果是发布到自定义域名</span>
+<span class="token comment"># echo 'www.example.com' &gt; CNAME</span>
+
+<span class="token function">git</span> init
+<span class="token function">git</span> <span class="token function">add</span> -A
+<span class="token function">git</span> commit -m <span class="token string">'deploy'</span>
+
+<span class="token comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span>
+<span class="token comment">#  git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master</span>
+
+<span class="token comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span>
+<span class="token comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git master:gh-pages</span>
+
+<span class="token builtin class-name">cd</span> -
+</code></pre></div><ul><li>package.json 文件新增命令</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;deploy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bash deploy.sh&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 开发完成执行命令</span>
+<span class="token function">npm</span> run deploy
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vuepress-study/" class="prev router-link-active">
+          主页
+        </a></span> <span class="next"><a href="/vuepress-study/npm/">
+          npm命令
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-study/assets/js/app.ba3766b5.js" defer></script><script src="/vuepress-study/assets/js/2.6e319733.js" defer></script><script src="/vuepress-study/assets/js/8.a03f4ce0.js" defer></script>
+  </body>
+</html>

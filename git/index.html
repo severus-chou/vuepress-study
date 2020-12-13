@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 常用命令 | 开发知识点</title>
+    <meta name="description" content="vuepress study">
+    
+    
+    <link rel="preload" href="/vuepress-study/assets/css/0.styles.221d8580.css" as="style"><link rel="preload" href="/vuepress-study/assets/js/app.ba3766b5.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/2.6e319733.js" as="script"><link rel="preload" href="/vuepress-study/assets/js/7.94ac207e.js" as="script"><link rel="prefetch" href="/vuepress-study/assets/js/10.0a07f2f9.js"><link rel="prefetch" href="/vuepress-study/assets/js/11.e5eaa34b.js"><link rel="prefetch" href="/vuepress-study/assets/js/12.6a6b2ef0.js"><link rel="prefetch" href="/vuepress-study/assets/js/3.c293dd07.js"><link rel="prefetch" href="/vuepress-study/assets/js/4.2f35b444.js"><link rel="prefetch" href="/vuepress-study/assets/js/5.87f30edc.js"><link rel="prefetch" href="/vuepress-study/assets/js/6.20b90a4b.js"><link rel="prefetch" href="/vuepress-study/assets/js/8.a03f4ce0.js"><link rel="prefetch" href="/vuepress-study/assets/js/9.ac3e6d7d.js">
+    <link rel="stylesheet" href="/vuepress-study/assets/css/0.styles.221d8580.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-navbar"><!----> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/vuepress-study/" class="sidebar-link">主页</a></li><li><a href="/vuepress-study/install/" class="sidebar-link">安装</a></li><li><a href="/vuepress-study/npm/" class="sidebar-link">npm命令</a></li><li><a href="/vuepress-study/git/" class="active sidebar-link">git命令</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vuepress-study/express/" class="sidebar-link">express</a></li><li><a href="/vuepress-study/mongo/" class="sidebar-link">mongo</a></li><li><a href="/vuepress-study/js/" class="sidebar-link">JS</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="git-常用命令"><a href="#git-常用命令" aria-hidden="true" class="header-anchor">#</a> Git 常用命令</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>  <span class="token comment"># 初始化Git</span>
+  <span class="token function">git</span> init
+
+  <span class="token comment"># 克隆本地仓库 （/path/to/repository 本地仓库地址）</span>
+  <span class="token function">git</span> clone /path/to/repository
+
+  <span class="token comment"># 克隆远程仓库</span>
+  <span class="token function">git</span> clone username@host:/path/to/repository
+
+  <span class="token comment"># 添加指定文件到缓存区</span>
+  <span class="token function">git</span> <span class="token function">add</span> <span class="token variable">${filename}</span>
+
+  <span class="token comment"># 添加所有改动文件到缓存区</span>
+  <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+  <span class="token comment"># 提交改动</span>
+  <span class="token function">git</span> commit -m <span class="token variable">${message}</span>
+
+  <span class="token comment"># 提交到远程仓库，master 可更换为指定分支名</span>
+  <span class="token function">git</span> push origin master
+
+  <span class="token comment"># 如还没克隆仓库，并欲将本地仓库连接某个远程服务器，可以使用此命令</span>
+  <span class="token function">git</span> remote <span class="token function">add</span> origin <span class="token variable">${path}</span>
+
+  <span class="token comment"># 创建一个叫做“feature_x”的分支，并切换过去</span>
+  <span class="token function">git</span> checkout -b feature_x
+
+  <span class="token comment"># 切换到master分支</span>
+  <span class="token function">git</span> checkout master
+
+  <span class="token comment"># 删除本地feature_x分支</span>
+  <span class="token function">git</span> branch -d feature_x
+
+  <span class="token comment"># 更新你的本地仓库至最新改动</span>
+  <span class="token function">git</span> pull
+
+  <span class="token comment"># 合并其他分支到你的当前分支</span>
+  <span class="token function">git</span> merge <span class="token variable">${other branchName}</span>
+
+  <span class="token comment"># 在合并改动之前,可以使用此命令查看区别</span>
+  <span class="token function">git</span> <span class="token function">diff</span> <span class="token variable">${source_branch}</span> <span class="token variable">${target_branch}</span>
+
+  <span class="token comment"># 打 tag，创建标签，\_1b2e1d63ff\* 是你想要标记的提交 ID 的前 10 位字符</span>
+  <span class="token function">git</span> tag <span class="token number">1.0</span>.0 1b2e1d63ff
+
+  <span class="token comment"># 获取日志</span>
+  <span class="token function">git</span> log
+
+  <span class="token comment"># 切换分支</span>
+  <span class="token function">git</span> checkout <span class="token variable">${branchName}</span>
+
+  <span class="token comment">#  丢弃本地改动与提交，到服务器上获取最新的版本并将本地主分支指向到它</span>
+  <span class="token function">git</span> fetch origin  <span class="token function">git</span> reset --hard origin/master
+
+  <span class="token comment"># 打开图形化Git</span>
+  gitk
+
+  <span class="token comment"># 彩色的Git输出</span>
+  <span class="token function">git</span> config color.ui <span class="token boolean">true</span>
+
+  <span class="token comment">#  设置显示历史记录时，只显示一行注释信息</span>
+  <span class="token function">git</span> config format.pretty oneline
+
+  <span class="token comment"># 交互地添加文件至缓存区</span>
+  <span class="token function">git</span> <span class="token function">add</span> -i
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/vuepress-study/npm/" class="prev">
+          npm命令
+        </a></span> <span class="next"><a href="/vuepress-study/express/">
+          express
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-study/assets/js/app.ba3766b5.js" defer></script><script src="/vuepress-study/assets/js/2.6e319733.js" defer></script><script src="/vuepress-study/assets/js/7.94ac207e.js" defer></script>
+  </body>
+</html>
